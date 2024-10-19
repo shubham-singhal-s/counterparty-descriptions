@@ -1,0 +1,14 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "postCreateCommand": "sudo apt install curl",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000
+    ]
+}
