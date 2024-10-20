@@ -47,7 +47,7 @@ export const APIKeyConfirmation = () => {
   const Base = () => {
     if (showModal) {
       return (
-        <Box>
+        <Box sx={{ backgroundColor: "whitesmoke" }}>
           <Box
             sx={{
               width: "100%",
@@ -56,8 +56,13 @@ export const APIKeyConfirmation = () => {
               boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
             }}
           >
-            <Stack direction="row" justifyContent="space-between">
-              <Typography variant="h3">Counterparties</Typography>
+            <Stack
+              sx={{ flexDirection: { xs: "column", sm: "row" } }}
+              justifyContent="space-between"
+            >
+              <Typography sx={{ typography: { sm: "h3", xs: "h4" } }}>
+                Counterparties
+              </Typography>
               <Box alignContent="center">
                 <span style={{ paddingRight: 10 }}>Generation style is</span>
                 <Select

@@ -16,7 +16,7 @@ export const ListCounterparties: FC = () => {
     <Box>
       <List
         sx={{
-          m: 8,
+          m: { xs: 2, sm: 8 },
           boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
         }}
       >

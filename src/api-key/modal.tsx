@@ -6,6 +6,7 @@ import {
   Dialog,
   FormControl,
   TextField,
+  Link,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -31,8 +32,11 @@ export const APIModal = ({ handleSubmit }: { handleSubmit: any }) => {
       </DialogTitle>
       <Box component="form" onSubmit={onSubmit} sx={{ padding: 4 }}>
         <Typography>
-          This is a client only app and requires an API key. Please provide one
-          below 😄
+          This is a client only app and requires a{" "}
+          <Link href="https://ai.google.dev/pricing#1_5flash" target="_blank">
+            Gemini API key
+          </Link>
+          . Please provide one below 😄
         </Typography>
         <FormControl sx={{ width: "100%" }}>
           <TextField

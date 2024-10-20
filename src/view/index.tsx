@@ -80,9 +80,13 @@ export const ViewCounterparty = () => {
   return (
     <Box>
       {loading ? <LinearProgress /> : ""}
-      <Box sx={{ p: 8 }}>
+      <Box sx={{ p: { xs: 2, sm: 6, md: 8 } }}>
         <Typography
-          sx={{ py: 1, my: 4, borderBottom: "1px solid #aaa" }}
+          sx={{
+            py: 1,
+            my: { xs: 0, sm: 2, md: 4 },
+            borderBottom: "1px solid #aaa",
+          }}
           variant="h5"
         >
           {counterparty?.name}
@@ -97,7 +101,12 @@ export const ViewCounterparty = () => {
         </Box>
         <Box sx={{ mt: 2, borderLeft: "4px solid #16abbc", pl: 4 }}>
           <Stack direction="row" alignItems="center">
-            <Box sx={{ width: "85%", maxWidth: "800px" }}>
+            <Box
+              sx={{
+                width: { xs: "95%", sm: "90%", md: "85%" },
+                maxWidth: "800px",
+              }}
+            >
               <Typography variant="caption">Description</Typography>
               <Typography
                 sx={{ color: loading ? "#aaa" : "inherit" }}
@@ -106,7 +115,7 @@ export const ViewCounterparty = () => {
                 {counterparty?.description ? counterparty?.description : "None"}
               </Typography>
             </Box>
-            <Box sx={{ px: 8 }}>
+            <Box sx={{ px: { xs: 2, sm: 4, md: 8 } }}>
               <IconButton
                 onClick={() => refresh()}
                 disabled={loading}
